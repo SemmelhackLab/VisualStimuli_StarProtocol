@@ -36,15 +36,15 @@ elif direction == 'l':
 moving_time = x_distance/float(speed) # second
 position = [-x_distance/2.0, 0]
 
-# dt = 100
-# dev = u3.U3()  # Open first found U3
-#
-# dev.getCalibrationData()
-# dev.configIO(EnableCounter1=True,TimerCounterPinOffset=7)
+dt = 100
+dev = u3.U3()  # Open first found U3
+
+dev.getCalibrationData()
+dev.configIO(EnableCounter1=True,TimerCounterPinOffset=7)
 
 myWin = visual.Window(monitor_size, monitor=myMonitor, units='degFlat', color = (-1,-1,-1), fullscr=True,viewPos=[0,0])
 
-'''get the the average time per frame'''
+'''Get the the average time per frame'''
 frametime = myWin.getMsPerFrame(nFrames=60, showVisual=False, msg='', msDelay=0.0)[0]
 
 # return the the average time per frame, with unit of ms
