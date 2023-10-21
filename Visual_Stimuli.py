@@ -36,7 +36,7 @@ elif direction == 'l':
 moving_time = x_distance/float(speed) # second
 position = [-x_distance/2.0, 0]
 
-dt = 100
+dt = 10
 dev = u3.U3()  # Open first found U3
 
 dev.getCalibrationData()
